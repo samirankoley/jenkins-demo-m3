@@ -15,6 +15,10 @@
 
 		<mule.version>3.9.2</mule.version>
 		<mule.tools.version>1.7</mule.tools.version>
+		<username>samiran_koley</username>
+		<password>samb11!H</password>
+		<applicationName>jenkins-demo-m3</applicationName>
+		<environment>PROD</environment>
 	</properties>
 
 	<build>
@@ -63,13 +67,14 @@
 				<version>2.3.2</version>
 				<extensions>true</extensions>
 				<configuration>
-					<deploymentType>cloudhub</deploymentType>
-					<muleVersion>3.9.2</muleVersion>
-					<username>samiran_koley</username>
-					<password>samb11!H</password>
-					<workerType>Micro</workerType>
-					<redeploy>true</redeploy>
-					<environment>PROD</environment>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${mule.version}</muleVersion>
+						<username>${username}</username>
+						<password>${password}</password>
+						<applicationName>${cloudhub.application.name}</applicationName>
+						<environment>${environment}</environment>						
+					</cloudHubDeployment>
 				</configuration>
 				<executions>
 					<execution>
