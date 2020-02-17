@@ -19,6 +19,7 @@
 		<password>samb11!H</password>
 		<applicationName>jenkins-demo-m3</applicationName>
 		<environment>PROD</environment>
+		<business.group>LnD</business.group>
 	</properties>
 
 	<build>
@@ -73,7 +74,8 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${cloudhub.application.name}</applicationName>
-						<environment>${environment}</environment>						
+						<environment>${environment}</environment>	
+						<businessGroup>${business.group}</businessGroup>					
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
